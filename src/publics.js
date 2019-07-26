@@ -135,6 +135,16 @@ $.fn.steps.previous = function ()
 };
 
 /**
+ * !!smartcockpit add-on!!
+ * Routes to the given index.
+ * @param {Integer} index The position (zero-based) of the step to go to
+ * @return {Boolean} Indicates whether the action executed
+ */
+$.fn.steps.goToStep = function (index) {
+	return goToStep(this, getOptions(this), getState(this), index);
+};
+
+/**
  * Removes a specific step by an given index.
  *
  * @method remove
